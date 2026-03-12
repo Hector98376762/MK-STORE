@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>MK STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<header class="header">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="logo">
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <i class="bi bi-list"></i>
+        </div>
+
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#Productos">Productos</a></li>
+                <li><a href="#Comentarios">Comentarios</a></li>
+                <li><a href="#Contactos">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <div class="carrito" onclick="verCarrito()">
+            <i class="bi bi-cart-fill"></i>
+            <span class="contador" id="contador">0</span>
+        </div>
+
+        <aside id="carrito-menu" class="carrito-menu">
+            <div class="carrito-header">
+                <h3>Tu Pedido</h3>
+                <span onclick="verCarrito()" style="cursor:pointer; font-size: 2rem;">&times;</span>
+            </div>
+            <div id="lista-carrito" class="lista-carrito">
+                </div>
+            <div class="carrito-footer">
+                <p class="total-pedido">Total: $<span id="total-precio">0</span></p>
+                <button class="btn-confirmar-wa" onclick="enviarWhatsApp()">
+                    <i class="bi bi-whatsapp"></i> Confirmar por WhatsApp
+                </button>
+            </div>
+        </aside>
+    </header>
+
+
+    <main class="main">
+        <section class="hero-main">
+            <div class="text-hero">
+                <h2>Bienvenido a MK Store</h2>
+                <p>Descubre la moda que te define. En MK Store encontrarás estilo, <br>calidad  y las últimas tendencias en ropa para expresar quién eres.</p>
+              
+
+            <div class="btn">
+                <button class="btn-primary">Pedir servicio</button>
+                <button class="btn-segundary">Contactanos</button>
+            </div>
+             
+            <div class="iconos">
+                <h3>Nos puedes encontrar en:</h3>
+            <div class="redes">
+                
+               <i class="bi bi-facebook"></i>
+               <i class="bi bi-whatsapp"></i>
+               <i class="bi bi-tiktok"></i>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="nosotros animar" id="Nosotros">
+    <div class="container-nosotros">
+        <div class="text-nosotros">
+            <h2>Quienes somos?</h2>
+        </div>
+        
+        <div class="grid-nosotros">
+            <div class="imagen">
+                <img src="img/nosotros.jpg" alt="nosotros">
+            </div>
+
+            <div class="contenido-derecha">
+                <div class="texto">
+                    <p>En MK Store somos una tienda dedicada a ofrecer ropa moderna, cómoda y con estilo para personas que quieren expresar su personalidad a través de la moda. Nuestro objetivo es brindar productos de calidad que combinen tendencias actuales con precios accesibles.
+                    Creemos que la ropa no es solo una prenda, sino una forma de mostrar quién eres.</p>
+                </div>
+
+                <div class="info-nosotros">
+                    <div class="card">
+                        <div class="item">
+                            <i class="bi bi-shop"></i>
+                            <p>Tienda de moda moderna.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="item">
+                            <i class="bi bi-bag"></i>
+                            <p>Ropa con estilo.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="item">
+                            <i class="bi bi-star"></i>
+                            <p>Productos de calidad.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="item">
+                            <i class="bi bi-people"></i>
+                            <p>Clientes satisfechos</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="item">
+                            <i class="bi bi-truck"></i>
+                            <p>Envíos rápidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <section class="productos animar" id="Productos">
+    <div class="container-productos">
+        <div class="text-productos">
+            <h2>Nuestros Productos</h2>
+        </div>
+
+         <div class="filtros">
+    
+   <button class="filter-btn" data-filter="Accesorios">Accesorios</button>
+   <button class="filter-btn" data-filter="Pantalones">Pantalones</button>
+   <button class="filter-btn" data-filter="Poloches">Poloches</button>
+   <button class="filter-btn" data-filter="Calzados">Calzados</button>
+</div>
+
+   <div class="grid-Productos">
+     <div class="card-productos" data-category="Accesorios">
+      <img src="img/pulsera.jpg" alt="Pulsera">
+      <h3>Pulsera</h3>
+      <p>Descripción: Pulsera elegante para complementar cualquier estilo.</p>
+      <span class="precy">$8</span>
+      <div class="btn-productos">
+        <button onclick="agregarCarrito('Pulsera',8,'img/pulsera.jpg')">
+           Agregar
+        </button>
+      </div>
+      
+     </div>
+
+     <div class="card-productos" data-category="Accesorios">
+      <img src="img/pendientes.jpg" alt="Pendientes">
+      <h3>Pendientes</h3>
+      <p>Pendientes modernos que resaltan tu look.</p>
+      <span class="precy">$10</span>
+      <div class="btn-productos">
+        <button onclick="agregarCarrito('Pendientes',10,'img/pendientes.jpg')">Agregar</button>
+      </div>
+      
+     </div>
+
+     <div class="card-productos" data-category="Accesorios">
+      <img src="img/Pañoleta.jpg" alt="Pañoleta">
+      <h3>Pañoleta</h3>
+      <p>Pañoleta suave y ligera para un estilo único.</p>
+      <span class="precy">$12</span>
+      <div class="btn-productos">
+       <button onclick="agregarCarrito('Pañoleta',12,'img/Pañoleta.jpg')">
+           Agregar
+        </button>
+      </div>
+      
+     </div>
+
+     <div class="card-productos" data-category="Accesorios">
+      <img src="img/Pin decorativo.jpg" alt="Pin decorativo">
+      <h3>Pin decorativo</h3>
+      <p>Pin pequeño perfecto para chaquetas o mochilas.</p>
+      <span class="precy">$5</span>
+      <div class="btn-productos">
+      <button onclick="agregarCarrito('Pin decorativo',5,'img/pin decorativo.jpg')">
+           Agregar
+        </button>
+        </div>
+      
+     </div>
+
+     <div class="card-productos" data-category="Accesorios">
+      <img src="img/Porta tarjetas.jpg" alt="Porta tarjetas">
+      <h3>Porta tarjetas</h3>
+      <p>Porta tarjetas práctico y elegante.</p>
+      <span class="precy">$15</span>
+      <div class="btn-productos">
+     <button onclick="agregarCarrito('Porta tarjetas',15,'img/Porta tarjetas.jpg')">
+           Agregar
+        </button>
+        </div>
+      
+     </div>
+
+     <div class="card-productos" data-category="Accesorios">
+      <img src="img/Protector de gafas.jpg" alt="Protector de gafas">
+      <h3>Protector de gafas</h3>
+      <p>Protector resistente para cuidar tus gafas.</p>
+      <span class="precy">$8</span>
+      <div class="btn-productos">
+     <button onclick="agregarCarrito('Protector de gafas',8,'img/Protector de gafas.jpg')">
+           Agregar
+        </button>
+        </div>
+    
+     </div>
+
+     <div class="card-productos" data-category="Pantalones">
+          <img src="img/Pantalón Clásico.jpg" alt="Pantalón Clásico">
+          <h3>Pantalón Clásico</h3>
+          <p>Pantalón elegante ideal para ocasiones formales.</p>
+       <span class="precy">$35</span>
+       <div class="btn-productos">
+         <button onclick="agregarCarrito('Pantalón Clásico',35,'img/Pantalón Clásico.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+      <div class="card-productos" data-category="Pantalones">
+          <img src="img/Pantalón Casual.jpg" alt="Pantalón Casual">
+          <h3>Pantalón Casual</h3>
+          <p>Pantalón cómodo perfecto para el día a día.</p>
+       <span class="precy">$30</span>
+       <div class="btn-productos">
+         <button onclick="agregarCarrito('Pantalón Casual',30,'img/Pantalón Casual.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+      <div class="card-productos" data-category="Pantalones">
+          <img src="img/Pantalón Deportivo.jpg" alt="Pantalón Deportivo">
+          <h3>Pantalón Deportivo</h3>
+          <p>Pantalón ligero ideal para entrenar o salir cómodo.</p>
+       <span class="precy">$28</span>
+       <div class="btn-productos">
+         <button onclick="agregarCarrito('Pantalón Deportivo',28,'img/Pantalón Deportivo.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+      <div class="card-productos" data-category="Pantalones">
+          <img src="img/Pantalón Jeans.jpg" alt="Pantalón Jeans">
+          <h3>Pantalón Jeans</h3>
+          <p>Pantalón de mezclilla clásico y duradero.</p>
+       <span class="precy">$42</span>
+       <div class="btn-productos">
+         <button onclick="agregarCarrito('Pantalón Jeans',42,'img/Pantalón Jeans.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+      <div class="card-productos" data-category="Pantalones">
+          <img src="img/Pantalón Slim Fit.jpg" alt="Pantalón Slim Fit">
+          <h3>Pantalón Slim Fit</h3>
+          <p>Pantalón ajustado con estilo moderno.</p>
+       <span class="precy">$40</span>
+       <div class="btn-productos">
+         <button onclick="agregarCarrito('Pantalón Slim Fit',40,'img/Pantalón Slim Fit.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+      <div class="card-productos" data-category="Pantalones">
+          <img src="img/Pantalón Cargo.jpg" alt="Pantalón Cargo">
+          <h3>Pantalón Cargo</h3>
+          <p>Pantalón resistente con bolsillos laterales.</p>
+       <span class="precy">$38</span>
+       <div class="btn-productos">
+         <button onclick="agregarCarrito('Pantalón Cargo',38,'img/Pantalón Cargo.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Poloches">
+       <img src="img/Poloche Clásico.jpg" alt="Poloche Clásico">
+       <h3>Poloche Clásico</h3>
+       <p>Poloche cómodo y sencillo para uso diario.</p>
+       <span class="precy">$18</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Poloche Clásico',18,'img/Poloche Clasico.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Poloches">
+       <img src="img/Poloche Deportivo.jpg" alt="Poloche Deportivo">
+       <h3>Poloche Deportivo</h3>
+       <p>Poloche ligero ideal para actividades y deporte.</p>
+       <span class="precy">$20</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Poloche Deportivo',20,'img/Poloche Deportivo.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Poloches">
+       <img src="img/Poloche Slim Fit.jpg" alt="Poloche Slim Fit">
+       <h3>Poloche Slim Fit</h3>
+       <p>Poloche ajustado con estilo moderno.</p>
+       <span class="precy">$22</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Poloche Slim Fit',22,'img/Poloche Slim Fit.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Poloches">
+       <img src="img/Poloche Premium.jpg" alt="Poloche Premium">
+       <h3>Poloche Premium</h3>
+       <p>Poloche de tela suave y calidad superior.</p>
+       <span class="precy">$25</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Poloche Premium',25,'img/Poloche Premium.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Poloches">
+       <img src="img/Poloche Casual.jpg" alt="Poloche Casual">
+       <h3>Poloche Casual</h3>
+       <p>Poloche fresco perfecto para cualquier ocasión.</p>
+       <span class="precy">$19</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Poloche Casual',19,'img/Poloche Casual.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Poloches">
+       <img src="img/Poloche Urbano.jpg" alt="Poloche Urbano">
+       <h3>Poloche Urbano</h3>
+       <p>Poloche moderno con estilo juvenil.</p>
+       <span class="precy">$23</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Poloche Urbano',23,'img/Poloche Urbano.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+    <div class="card-productos" data-category="Calzados">
+       <img src="img/Jordan 4 black cat.jpg" alt="Jordan 4 black cat">
+       <h3>Jordan 4 black cat</h3>
+       <p>Tenis con estilo urbano inspirados en el diseño Jordan.</p>
+       <span class="precy">$95</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Jordan 4 black cat',95,'img/Jordan 4 black cat.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Calzados">
+       <img src="img/Nike Air Flow.jpg" alt="Nike Air Flow">
+       <h3>Nike Air Flow</h3>
+       <p> Calzado deportivo cómodo con estilo moderno.</p>
+       <span class="precy">$90</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Nike Air Flow',90,'img/Nike Air Flow.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Calzados">
+       <img src="img/New Balance Urban.jpg" alt="">
+       <h3>New Balance Urban</h3>
+       <p>Tenis clásicos con comodidad y estilo casual.</p>
+       <span class="precy">$85</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('New Balance Urban',85,'img/New Balance Urban.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Calzados">
+       <img src="img/Reebok Classic Move.jpg" alt="Reebok Classic Move">
+       <h3>Reebok Classic Move</h3>
+       <p>Zapatos deportivos con diseño clásico y elegante.</p>
+       <span class="precy">$80</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Reebok Classic Move',80,'img/Reebok Classic Move.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Calzados">
+       <img src="img/Jordan 4 Red Thunder.jpg" alt="Jordan 4 Red Thunder">
+       <h3>Jordan 4 Red Thunder</h3>
+       <p>Tenis ligeros ideales para caminar con estilo.</p>
+       <span class="precy">$92</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Nike Street Runner',92,'img/Jordan 4 Red Thunder.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+
+     <div class="card-productos" data-category="Calzados">
+       <img src="img/Jordan 12 Universiti blue.jpg" alt="Jordan 12 Universiti blue">
+       <h3>Jordan 12 Universiti blue</h3>
+       <p>Calzado premium con presencia y mucho flow.</p>
+       <span class="precy">$100</span>
+        <div class="btn-productos">
+         <button onclick="agregarCarrito('Jordan 12 Universiti blue',100,'img/Jordan 12 Universiti blue.jpg')">
+            Agregar
+         </button>
+       </div>
+     </div>
+   </div>
+    </div>
+ </section>
+
+  <section class="comentarios animar" id="Comentarios">
+    <div class="container-comentarios">
+        <div class="text-comentarios">
+            <h2>Comentarios</h2>
+            <p>Los que dicen nuestros Clientes</p>
+        </div>
+
+        <div class="grid-comentarios">
+            <div class="card-comentarios">
+                <img src="img/jose.jpg" alt="Foto Opinion">
+                <h3>Jose .M</h3>
+                <p>La mejor tienda que eh comprado un super servicio y los empleados son muy atentos.</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="card-comentarios">
+                <img src="img/hector.jpg" alt="Foto Opinion">
+                <h3>Hector .A</h3>
+                <p>MK Store es una maravilla sus ropas son exclusivas y muy elegante la mejor tienda que ehh pisado.</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="card-comentarios">
+                <img src="img/joseph.jpg" alt="Foto Opinion">
+                <h3>Joseph .C</h3>
+                <p>Wao un super servicio la verdad MK Store es una tienda muy exclusiva muy buen servicio.</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="card-comentarios">
+                <img src="img/saymon.jpg" alt="Foto Opinion">
+                <h3>Saymon .M</h3>
+                <p>En MK STORE hay de todo super atentos con el cliente y super en ropas esa empresa sabe de ropa.</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="card-comentarios">
+                <img src="img/alexander.jpg " alt="Foto Opinion">
+                <h3>Alexander .C</h3>
+                <p>Muy buena experiencia la verdad me encanto el trato que me dieron y esat super cool la tienda muchas bendiciones.</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="card-comentarios">
+                <img src="img/ronal.jpg" alt="Foto Opinion">
+                <h3>Ronal .M</h3>
+                <p>La mejor tienda que ehh visitado la verdad me encanta los articulos que tienen la verdad la mejor tienda que ehh visto MK STORE.</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            
+        </div>
+    </div>
+  </section>
+
+  <section class="contactos animar" id="Contactos">
+      <div class="container-contactos">
+        <h2>Contactanos</h2>
+       <p class="subtitulo">Estamos aqui para ayudarte. Puedes visitarnos o escribirnos.</p>
+       <div class="grid-contacto">
+        <div class="info-contacto">
+        <div class="item-contacto">
+            <i class="bi bi-geo-alt"></i>
+            <p>Santo Domingo, República Dominicana</p>
+        </div>
+
+        <div class="item-contacto">
+            <i class="bi bi-telephone"></i>
+            <p>+1 (809) 943-0075</p>
+        </div>
+
+        <div class="item-contacto">
+           <i class="bi bi-envelope"></i>
+            <p>MKSTORE@GMAIL.com</p>
+        </div>
+
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps?q=San%20Cristobal%20Republica%20Dominicana&output=embed"
+                  loading="lazy">
+            </iframe>
+
+            </iframe>
+        </div>
+        </div>
+       </div>
+      </div>
+  </section>
+</main>
+
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brad">
+            <h2>MK STORE</h2>
+            <P>Tu tienda para ver las verdaderas marcas de ropa.</P>
+        </div>
+
+        <div class="footer-links">
+           <h3>Enlaces</h3>
+           <ul>
+            <li><a href="#Inicio>">Inicio</a></li>
+            <li><a href="#Nosotros">Nosotros</a></li>
+            <li><a href="#Productos">Productos</a></li>
+            <li><a href="#Comentarios">Comentarios</a></li>
+            <li><a href="#Contactos">Contactos</a></li>
+           </ul>
+        </div>
+
+    <div class="footer-social">
+      <h3>Síguenos</h3>
+      <div class="social-icons">
+       <i class="bi bi-tiktok"></i>
+       <i class="bi bi-facebook"></i>
+       <i class="bi bi-whatsapp"></i>
+       <i class="bi bi-instagram"></i>
+      </div>
+    </div>
+
+     <div class="footer-bottom">
+    <p>© 2026 MK STORE. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+    </div>
+ </footer>
+
+ <script src="app.js"></script>
+</body>
+</html>

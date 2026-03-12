@@ -102,7 +102,7 @@ alert("El carrito está vacío");
 return;
 }
 
-let telefono = "18298649779"; 
+let telefono = "18099430075"; 
 
 let mensaje = "Hola hermano, quiero hacer este pedido:\n\n";
 

@@ -81,7 +81,7 @@
 .hero-main{
   background: linear-gradient(
     rgba(0,0,0,0.55),
-    rgba(0,0,0,44)
+    rgba(0,0,0,0.44)
   ), url(img/hero.jpg);
   background-position: center;
   background-size: cover;
@@ -292,7 +292,7 @@ transform:translateY(0);
 
 .grid-Productos {
     display: grid;
-   grid-template-columns: repeat(auto-fit , minmax(220px, 1fr));
+   grid-template-columns: repeat(auto-fit , minmax(240px, 1fr));
    gap: 30px;
     justify-content: center;
 }
@@ -369,7 +369,7 @@ transform:translateY(0);
 
 .btn-productos button:hover {
     background-color: #c4001d;
-   transform: scale(1.05);
+    transform: translateY(-3px);
 }
 
 .comentarios {
@@ -411,7 +411,7 @@ transform:translateY(0);
 
 .grid-comentarios {
     display: grid;
-    grid-template-columns: repeat(220px, 1fr);
+    grid-template-columns: repeat(auto-fit , minmax(220px , 1fr));
     gap: 30px;
 }
 
@@ -565,7 +565,7 @@ transform:translateY(0);
     padding: 10px;
 }
 
-.social-icons i:hover
+.social-icons i:hover,
 .social-icons i:active {
     transform: translateY(-3px);
     background-color: #c4001d;
@@ -598,23 +598,33 @@ font-size:2rem;
 font-size:1.2rem;
 }
 
+/* NOSOTROS */
+
 .grid-nosotros{
 grid-template-columns:1fr;
+gap:40px;
 }
+
+/* PRODUCTOS */
 
 .grid-Productos{
-grid-template-columns:repeat(3 ,1fr);
-justify-items:center;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
+
+/* COMENTARIOS */
 
 .grid-comentarios{
-grid-template-columns:repeat(2, 1fr);
-
+grid-template-columns:repeat(2,1fr);
 }
+
+/* CONTACTO */
 
 .grid-contacto{
 grid-template-columns:1fr;
 }
+
+/* FOOTER */
 
 .footer-container{
 flex-direction:column;
@@ -623,10 +633,14 @@ text-align:center;
 
 }
 
-/* CELULARES */
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
 @media (max-width:768px){
 
-/* MENU HAMBURGUESA */
+/* MENU */
 
 .menu{
 position:fixed;
@@ -681,18 +695,17 @@ gap:30px;
 
 .grid-Productos{
 grid-template-columns:repeat(2,1fr);
-justify-items:center;
+gap:20px;
 }
 
 .card-productos{
 width:100%;
-max-width:320px;
 }
 
 /* COMENTARIOS */
 
 .grid-comentarios{
-grid-template-columns: repeat(2,1fr);
+grid-template-columns:1fr;
 }
 
 /* CONTACTO */
@@ -709,7 +722,11 @@ width:100%;
 
 }
 
-/* CELULARES PEQUEÑOS */
+
+/* ========================= */
+/* CELULARES */
+/* ========================= */
+
 @media (max-width:480px){
 
 .header{
@@ -721,6 +738,8 @@ height:60px;
 width:50px;
 }
 
+/* HERO */
+
 .text-hero h2{
 font-size:1.5rem;
 }
@@ -729,20 +748,42 @@ font-size:1.5rem;
 font-size:1rem;
 }
 
+/* BOTONES */
+
 .btn-primary,
 .btn-segundary{
 padding:10px 18px;
 font-size:14px;
 }
 
+/* FILTROS */
+
 .filter-btn{
 padding:10px 15px;
+font-size:13px;
 }
+
+/* PRODUCTOS */
+
+.grid-Productos{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card-productos img{
+height:160px;
+}
+
+/* REDES */
 
 .redes{
 justify-content:center;
 }
 
+/* COMENTARIOS */
+
+.grid-comentarios{
+grid-template-columns:1fr;
 }
 
-
+}

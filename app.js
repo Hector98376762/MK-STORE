@@ -14,9 +14,6 @@ document.querySelectorAll('.menu a').forEach(link => {
 });
 
 
-
-
-
 const elementos = document.querySelectorAll(".animar");
 
 const observer = new IntersectionObserver((entries)=>{
@@ -92,7 +89,6 @@ menu.style.display = "block";
 }
 
 }
-
 
 
 function enviarWhatsApp(){

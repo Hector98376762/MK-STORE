@@ -20,7 +20,9 @@
     height: 85px;
 }
 
-.logo img { height: 70px; width: 60px; object-fit: cover; }
+.logo img { height: 60px; width: 60px; object-fit: cover; }
+
+
 
 .menu ul { display: flex; gap: 28px; }
 .menu li a { color: #ffffff; font-weight: bold; transition: 0.3s ease; }
@@ -49,7 +51,7 @@
     right: 0;
     width: 350px;
     height: 100vh;
-    background: white;
+    background: #bbbbbb;
     box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     z-index: 3000;
     flex-direction: column;
@@ -82,7 +84,7 @@
   background: linear-gradient(
     rgba(0,0,0,0.55),
     rgba(0,0,0,0.44)
-  ), url(img/hero.jpg);
+  ), url(img/hero.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,10 +205,15 @@ transform:translateY(0);
 
 .imagen img {
     width: 100%;
-    height: auto;
+    height: 450px;
     border-radius: 15px;
     object-fit: cover;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    
+}
+
+.imagen img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .texto p {
@@ -292,8 +299,8 @@ transform:translateY(0);
 
 .grid-Productos {
     display: grid;
-   grid-template-columns: repeat(auto-fit , minmax(240px, 1fr));
-   gap: 30px;
+   grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+    gap: 30px;
     justify-content: center;
 }
 
@@ -309,7 +316,7 @@ transform:translateY(0);
 
 .card-productos img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
     object-position: center;
@@ -360,18 +367,28 @@ transform:translateY(0);
 }
 
 .btn-productos button {
-    width: 50%;
-    padding: 10px;
-    cursor: pointer;
-    border: 2px solid #c4001d;
-    font-weight: bold;
-    transition: 0.3s;
+   width: auto;
+   min-width: 120px;
+   padding: 10px 20px;
+   cursor: pointer;
+   border: 2px solid #c4001d;
+   background-color: transparent;
+   color: #c4001d;
+   font-weight: bold;
+   border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32 1.275);
+   
 }
 
 .btn-productos button:hover {
     background-color: #c4001d;
-    transform: translateY(-3px);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(196, 0, 29, 0.3);
+    letter-spacing: 1px;
+    transform: translateY(-2px);
 }
+
+
 
 .comentarios {
     padding: 80px 20px;
@@ -407,6 +424,7 @@ transform:translateY(0);
     transition: transform 0.3 ease;
     text-align: center;
     position: relative;
+    padding: 20px;
     
 }
 
@@ -448,7 +466,7 @@ transform:translateY(0);
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #f0f0f0;
+    border: 3px solid greenyellow;
 }
 
 .contactos{
@@ -583,6 +601,12 @@ transform:translateY(0);
     color: #777;
 }
 
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 en PC */
+    gap: 30px;
+}
 
 @media (max-width:1024px){
 
@@ -735,8 +759,9 @@ padding:10px;
 }
 
 .logo img{
-height:60px;
-width:50px;
+object-fit: cover;
+width:60px;
+height: 60px;
 }
 
 /* HERO */
@@ -768,13 +793,51 @@ font-size:13px;
 
 .grid-Productos{
 grid-template-columns:repeat(2,1fr);
-gap:15px;
+gap: 15px;
 }
 
 .card-productos img{
-height:160px;
+height:140px;
+object-fit: cover;
 }
 
+.card-productos {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.card-productos h3 {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.card-productos p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.btn-productos button {
+    width: 100%;
+    padding: 12px 5px;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #c4001d;
+    border: 2px solid #c4001d;
+    border-radius: 50px;
+    transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+}
+
+.btn-productos button:active {
+    background-color: #c4001d;
+    color: #fff;
+    transform: scale(0.95);
+}
 /* REDES */
 
 .redes{

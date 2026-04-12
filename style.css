@@ -461,8 +461,8 @@ transform:translateY(0);
 }
 
 .card-comentarios img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
@@ -848,6 +848,11 @@ justify-content:center;
 
 .grid-comentarios{
 grid-template-columns:1fr;
+}
+
+.card-comentarios img {
+    height: 160px;
+    object-fit: cover;
 }
 
 }

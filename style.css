@@ -423,8 +423,9 @@ transform:translateY(0);
     padding-bottom: 20px;
     transition: transform 0.3 ease;
     text-align: center;
-    position: relative;
-    padding: 20px;
+    padding: 25px;
+    max-width: 400px;
+    margin: 20px auto;
     
 }
 
@@ -461,12 +462,13 @@ transform:translateY(0);
 }
 
 .card-comentarios img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
     object-fit: cover;
     margin-bottom: 15px;
     border: 3px solid greenyellow;
+    margin: 0 auto;
 }
 
 .contactos{

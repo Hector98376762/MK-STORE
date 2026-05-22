@@ -706,23 +706,30 @@ right:0;
 display:block;
 }
 
-/* HERO */
+
 
 .hero-main{
-padding:60px 20px;
+padding:40px 20px;
 height:auto;
-text-align:center;
+min-height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-position: center;
 }
 
 .text-hero h2{
 font-size:2rem;
+max-width: 100%;
+margin-left: 0;
 }
 
 .text-hero p{
 font-size:1.1rem;
 }
 
-/* NOSOTROS */
+
 
 .grid-nosotros{
 grid-template-columns:1fr;
@@ -746,13 +753,13 @@ width:100%;
 grid-template-columns:1fr;
 }
 
-/* CONTACTO */
+
 
 .grid-contacto{
 grid-template-columns:1fr;
 }
 
-/* CARRITO */
+
 
 .carrito-menu{
 width:100%;

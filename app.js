@@ -98,9 +98,9 @@ alert("El carrito está vacío");
 return;
 }
 
-let telefono = "18099430075"; 
+let telefono = "18299870515"; 
 
-let mensaje = "Hola hermano, quiero hacer este pedido:\n\n";
+let mensaje = "Hola hermano, quiero hacer este pedido :\n\n";
 
 let total = 0;
 
